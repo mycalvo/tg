@@ -13,7 +13,7 @@
                 const texto = await response.text();
                 procesarTextoForex(texto);
             } catch (error) {
-                console.error('Error al obtener los datoss:', error);
+                console.error('Error al obtener los datos:', error);
             }
         }
 
@@ -34,6 +34,7 @@
             }
 
             if (err === "ok") {
+                console.log("ok");
                 // En lugar de redirigir a un endpoint de servidor, construimos la URL final directamente
                 // Esto replica la lógica que estaba en api/redirect.js
                 const finalUrl = `${buscUrl}/get.php?username=${encodeURIComponent(buscUsernam)}&password=${encodeURIComponent(buscPassw)}&type=m3u_plus`;
@@ -41,7 +42,7 @@
                 // Redirigimos directamente a la URL final
                 window.location.href = finalUrl;
             } else {
-                console.log("Error en el procesamiento de datoss");
+                console.log("Error en el procesamiento de datos");
             }
         }
 
@@ -49,5 +50,6 @@
     </script>
 </head>
 <body>
+    <p>start</p>
 </body>
-  </html>
+</html>
