@@ -1,0 +1,1 @@
+tg sin api (redirect)
